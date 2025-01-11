@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLODWHITE OFFICALL</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    /* Giriş Efekti */
+    #intro {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    #intro h1 {
+      font-size: 120px;
+      color: white;
+      font-family: Arial, sans-serif;
+      animation: fadeInOut 3s forwards;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.5); }
+    }
+    #content {
+      display: none;
+    }
+    .main-title {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 20px 0;
+    }
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      color: white;
+    }
+    .video-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px; /* Minimum boşluk */
+    }
+    iframe {
+      width: 200px; /* Küçük video */
+      height: 110px;
+      margin-right: 10px;
+    }
+    .video-title {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      }, 3000); // 3 saniye sonra siteye geçiş
+    };
+  </script>
+</head>
+<body>
+  <!-- Giriş Ekranı -->
+  <div id="intro">
+    <h1>BLOD</h1>
+  </div>
+
+  <!-- Ana İçerik -->
+  <div id="content">
+    <h1 class="main-title">BLODWHITE OFFICIAL</h1>
+    <div class="video-section">
+      <div class="video-item">
+        <iframe src="https://youtu.be/dDowisvmlYA?si=JH0eAXCnx64m3FKf" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">Video Başlığı 1</div>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">Video Başlığı 2</div>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">Video Başlığı 3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
